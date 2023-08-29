@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+header {
+  height: 8%;
+  width: 100%;
+  background-color: rgb(198, 235, 235);
+}
+
+main {
+  height: 82%;
+  width: 100%;
+  background-color: gold;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.imagen {
+  height: 27%;
+  width: 12%;
+}
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+  margin: 1% 2% 1% 2%;
+}
+
+footer {
+  height: 10%;
+  width: 100%;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
