@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -10,15 +10,18 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./assets/styles/style.css" />
-    <title>Proyecto Api </title>
+    <link rel="shortcut icon" href="./assets/images/Logo Titulo.png" type="image/x-icon">
+    <title>Proyecto Api The Rick and Morty</title>
   </head>
   <body>
     <header>
-      <div>
-        <label for="busquedaEspecie">Busqueda Por Especie</label>
-        <input type="text" name="busqueda" id="busquedaEspecie" />
-        <button id="BuscarEspecie">Buscar</button>
+      <img class="header_img" src="./assets/images/Title.jpeg" alt="title">
+      <div class="container">
+        <input type="search" name="busquedaEspecie" id="busquedaEspecie" class="busquedaEspecie" placeholder="Buscar por especie">
+        <input type="search" name="busquedaNombre" id="busquedaNombre" class="busquedaNombre" placeholder="Buscar por Nombre">
+        <button id="buscar" class="buscar" type="submit">Buscar</button>
       </div>
+      <img  class="imgheader" class="header_img" src="https://i.pinimg.com/550x/ef/8b/fb/ef8bfbc1d600c512fb29d1577c33f173.jpg" alt="imgheader">
     </header>
     <main>
       <div class="root" id="root">
@@ -37,6 +40,7 @@
         </ul>
       </nav>
       Hecho por Javier Melo
+      <!-- <div class="animado">Hecho por Javier Melo</div> -->
     </footer>
   </body>
   <script type="module" src="./api/main.js"></script>
