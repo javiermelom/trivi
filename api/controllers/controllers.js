@@ -2,10 +2,10 @@
 export async function cartoons(url) {
   let datos = await fetch(url);
   let datosParseados = await datos.json();
-  let arrayDeCartoons = []; // Creacion de Array vacio para llenarlo con la info que queremos
+  let arrayDeCartoons = [];
   let previous = datosParseados.info.prev;
   let next = datosParseados.info.next;
-  
+
   for (let i = 0; i < datosParseados.results.length; i++) {
     const cartoon = datosParseados.results[i];
     let cartoonFormateado = {
@@ -37,21 +37,25 @@ export async function busquedaEspecie(barraEspecie) {
       imagen: cartoon.image,
       estado: cartoon.status,
     };
-    arrayDeCartoons.push(cartoonFormateado)
+    arrayDeCartoons.push(cartoonFormateado);
   }
   return arrayDeCartoons;
 }
 
-
 export async function busquedaNombre(barraNombre) {
   let resultadoNob = await fetch(`https://rickandmortyapi.com/api/character/?name=${barraNombre}`);
   let resultadoNobJson = await resultadoNob.json();
-  let cartoonFormateado = {
-    id: resultadoNobJson.id,
-    nombre: resultadoNobJson.name,
-    especie: resultadoNobJson.species,
-    imagen: resultadoNobJson.image,
-    estado: resultadoNobJson.status,
-  };
-  return cartoonFormateado;
+  let arrayDeCartoons = [];
+  for (let k = 0; k < resultadoNobJson.results.length; k++) {
+    const cartoon = resultadoNobJson.results[k];
+    let cartoonFormateado = {
+      id: cartoon.id,
+      nombre: cartoon.name,
+      especie: cartoon.species,
+      imagen: cartoon.image,
+      estado: cartoon.status,
+    };
+    arrayDeCartoons.push(cartoonFormateado);
+  }
+  return arrayDeCartoons;
 }

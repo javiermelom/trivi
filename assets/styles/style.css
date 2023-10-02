@@ -16,7 +16,7 @@ header {
   width: 100%;
   background-color: #000000;
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   align-items: center;
   padding-left: 3%;
   padding-right: 3%;
@@ -26,9 +26,9 @@ header {
   background-size: 5%; */
 }
 
-.container{
+.container {
   height: 100%;
-  width: 80%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,11 +46,31 @@ header {
   margin: 5px 0px;
 }
 
+.container1 {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+
+.container1 > select {
+  height: 30%;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0px;
+}
+
 .header_img {
   height: 80%;
   width: 18%;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
 }
 
@@ -64,7 +84,7 @@ header {
 .busquedaEspecie {
   background-color: #000000;
   color: #8de4f5;
-  font-weight:lighter;
+  font-weight: lighter;
 }
 
 .busquedaNombre {
@@ -76,6 +96,12 @@ header {
   background-color: #282828;
   color: #8de4f5;
 }
+
+.buscarN {
+  background-color: #282828;
+  color: #8de4f5;
+}
+
 main {
   height: 74%;
   width: 100%;
@@ -172,5 +198,6 @@ footer {
   width: 100px;
   height: 100px;
   /* background-color: red; */
-  animation: desplazar 5s ease-in-out infinite, cambiarColor 1s ease-in-out infinite;
+  animation: desplazar 5s ease-in-out infinite,
+    cambiarColor 1s ease-in-out infinite;
 }
